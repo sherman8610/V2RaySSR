@@ -148,13 +148,7 @@ install_mysql(){
     yum -y install mysql-server
     systemctl enable mysqld.service
     systemctl start  mysqld.service
-    if [ `yum list installed | grep mysql-community | wc -l` -ne 0 ]; then
-    	green "【checked】 MySQL安装成功"
-		echo
-		echo
-		sleep 2
-		mysql_status=1
-    fi
+
     echo
     echo
     green "==============="
